@@ -63,15 +63,15 @@ ROBOT ORIENTATION
 */
 
 //define your robot' specs here
-#define MOTOR_MAX_RPM 150                   // motor's max RPM
+#define MOTOR_MAX_RPM 160                   // motor's max RPM
 #define MAX_RPM_RATIO 0.85                  // max RPM allowed for each MAX_RPM_ALLOWED = MOTOR_MAX_RPM * MAX_RPM_RATIO
-#define MOTOR_OPERATING_VOLTAGE 12          // motor's operating voltage (used to calculate max RPM)
-#define MOTOR_POWER_MAX_VOLTAGE 12          // max voltage of the motor's power source (used to calculate max RPM)
-#define MOTOR_POWER_MEASURED_VOLTAGE 12     // current voltage reading of the power connected to the motor (used for calibration)
-#define COUNTS_PER_REV1 900                 // wheel1 encoder's no of ticks per rev
-#define COUNTS_PER_REV2 900                 // wheel2 encoder's no of ticks per rev
-#define COUNTS_PER_REV3 900                 // wheel3 encoder's no of ticks per rev
-#define COUNTS_PER_REV4 900                 // wheel4 encoder's no of ticks per rev
+#define MOTOR_OPERATING_VOLTAGE 16          // motor's operating voltage (used to calculate max RPM)
+#define MOTOR_POWER_MAX_VOLTAGE 7.4          // max voltage of the motor's power source (used to calculate max RPM)
+#define MOTOR_POWER_MEASURED_VOLTAGE 7.4     // current voltage reading of the power connected to the motor (used for calibration)
+#define COUNTS_PER_REV1 7680                // wheel1 encoder's no of ticks per rev
+#define COUNTS_PER_REV2 7680                // wheel2 encoder's no of ticks per rev
+#define COUNTS_PER_REV3 7680                // wheel3 encoder's no of ticks per rev
+#define COUNTS_PER_REV4 7680                // wheel4 encoder's no of ticks per rev
 #define WHEEL_DIAMETER 0.0667               // wheel's diameter in meters
 #define LR_WHEELS_DISTANCE 0.099            // distance between left and right wheels
 #define PWM_BITS 10                         // PWM Resolution of the microcontroller
@@ -93,17 +93,17 @@ ROBOT ORIENTATION
 
 // ENCODER PINS
 // Note: encoder pins must be consecutive (e.g. 2 and 3, 10 and 11 etc.)
-#define MOTOR1_ENCODER_A 0
-#define MOTOR1_ENCODER_B 1
+#define MOTOR1_ENCODER_A 16
+#define MOTOR1_ENCODER_B 17
 
-#define MOTOR2_ENCODER_A 8
-#define MOTOR2_ENCODER_B 9
+#define MOTOR2_ENCODER_A 18
+#define MOTOR2_ENCODER_B 19
 
-#define MOTOR3_ENCODER_A 0
-#define MOTOR3_ENCODER_B 1
+#define MOTOR3_ENCODER_A 20
+#define MOTOR3_ENCODER_B 21
 
-#define MOTOR4_ENCODER_A 8
-#define MOTOR4_ENCODER_B 9
+#define MOTOR4_ENCODER_A 22
+#define MOTOR4_ENCODER_B 23
 
 // MOTOR PINS
 #ifdef USE_GENERIC_2_IN_MOTOR_DRIVER
@@ -111,13 +111,13 @@ ROBOT ORIENTATION
   #define MOTOR1_IN_A 3
   #define MOTOR1_IN_B 4
 
-  #define MOTOR2_PWM 10
-  #define MOTOR2_IN_A 11
-  #define MOTOR2_IN_B 12
+  #define MOTOR2_PWM 5
+  #define MOTOR2_IN_A 6
+  #define MOTOR2_IN_B 7
 
-  #define MOTOR3_PWM 5
-  #define MOTOR3_IN_A 6
-  #define MOTOR3_IN_B 7
+  #define MOTOR3_PWM 10
+  #define MOTOR3_IN_A 11
+  #define MOTOR3_IN_B 12
 
   #define MOTOR4_PWM 13
   #define MOTOR4_IN_A 14
@@ -234,12 +234,7 @@ const int16_t ADC_LUT[4096] = { /* insert adc_calibrate data here */ };
 // #define ECHO_PIN 32
 #define USE_SHORT_BRAKE // for shorter stopping distance
 // #define WDT_TIMEOUT 60 // Sec
-#define BOARD_INIT { \
-    Wire.setSDA(SDA_PIN); \
-    Wire.setSCL(SCL_PIN); \
-    Wire.begin(); \
-    Wire.setClock(400000); \
-}
+#define BOARD_INIT { }
 // #define BOARD_INIT_LATE {}
 // #define BOARD_LOOP {}
 // #define JOINT_STATE_SUBSCRIBER "joint_states"
