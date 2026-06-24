@@ -65,7 +65,7 @@ ROBOT ORIENTATION
 //define your robot' specs here
 #define MOTOR_MAX_RPM 160                   // motor's max RPM
 #define MAX_RPM_RATIO 0.85                  // max RPM allowed for each MAX_RPM_ALLOWED = MOTOR_MAX_RPM * MAX_RPM_RATIO
-#define MOTOR_OPERATING_VOLTAGE 16          // motor's operating voltage (used to calculate max RPM)
+#define MOTOR_OPERATING_VOLTAGE 6          // motor's operating voltage (used to calculate max RPM)
 #define MOTOR_POWER_MAX_VOLTAGE 7.4          // max voltage of the motor's power source (used to calculate max RPM)
 #define MOTOR_POWER_MEASURED_VOLTAGE 7.4     // current voltage reading of the power connected to the motor (used for calibration)
 #define COUNTS_PER_REV1 7680                // wheel1 encoder's no of ticks per rev
@@ -82,8 +82,8 @@ ROBOT ORIENTATION
 // INVERT ENCODER COUNTS
 #define MOTOR1_ENCODER_INV false
 #define MOTOR2_ENCODER_INV false
-#define MOTOR3_ENCODER_INV false
-#define MOTOR4_ENCODER_INV false
+#define MOTOR3_ENCODER_INV true
+#define MOTOR4_ENCODER_INV true
 
 // INVERT MOTOR DIRECTIONS
 #define MOTOR1_INV false
@@ -102,8 +102,8 @@ ROBOT ORIENTATION
 #define MOTOR3_ENCODER_A 20
 #define MOTOR3_ENCODER_B 21
 
-#define MOTOR4_ENCODER_A 22
-#define MOTOR4_ENCODER_B 23
+#define MOTOR4_ENCODER_A 8
+#define MOTOR4_ENCODER_B 9
 
 // MOTOR PINS
 #ifdef USE_GENERIC_2_IN_MOTOR_DRIVER
@@ -208,8 +208,8 @@ ROBOT ORIENTATION
 #define LIDAR_SERVER { 192, 168, 1, 100 }  // eg IP of the desktop computer
 #define LIDAR_PORT 8889
 #define BAUDRATE 921600
-#define SDA_PIN 20 // specify I2C pins
-#define SCL_PIN 21
+#define SDA_PIN 0 // specify I2C pins
+#define SCL_PIN 1
 #define NODE_NAME "pico2"
 // #define TOPIC_PREFIX "pico2/"
 // #define CONTROL_TIMER 20
