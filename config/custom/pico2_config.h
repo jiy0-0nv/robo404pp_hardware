@@ -80,10 +80,10 @@ ROBOT ORIENTATION
 #define SERVO_FREQ 100                      // Servo PWM frequency
 
 // INVERT ENCODER COUNTS
-#define MOTOR1_ENCODER_INV false
+#define MOTOR1_ENCODER_INV true
 #define MOTOR2_ENCODER_INV false
 #define MOTOR3_ENCODER_INV true
-#define MOTOR4_ENCODER_INV true
+#define MOTOR4_ENCODER_INV false
 
 // INVERT MOTOR DIRECTIONS
 #define MOTOR1_INV false
@@ -93,35 +93,35 @@ ROBOT ORIENTATION
 
 // ENCODER PINS
 // Note: encoder pins must be consecutive (e.g. 2 and 3, 10 and 11 etc.)
-#define MOTOR1_ENCODER_A 16
-#define MOTOR1_ENCODER_B 17
+#define MOTOR2_ENCODER_A 16
+#define MOTOR2_ENCODER_B 17
 
-#define MOTOR2_ENCODER_A 18
-#define MOTOR2_ENCODER_B 19
+#define MOTOR1_ENCODER_A 20
+#define MOTOR1_ENCODER_B 21 
 
-#define MOTOR3_ENCODER_A 20
-#define MOTOR3_ENCODER_B 21
+#define MOTOR4_ENCODER_A 18
+#define MOTOR4_ENCODER_B 19
 
-#define MOTOR4_ENCODER_A 8
-#define MOTOR4_ENCODER_B 9
+#define MOTOR3_ENCODER_A 8
+#define MOTOR3_ENCODER_B 9
 
 // MOTOR PINS
 #ifdef USE_GENERIC_2_IN_MOTOR_DRIVER
-  #define MOTOR1_PWM 2
-  #define MOTOR1_IN_A 3
-  #define MOTOR1_IN_B 4
+  #define MOTOR2_PWM 2
+  #define MOTOR2_IN_A 3
+  #define MOTOR2_IN_B 4
 
-  #define MOTOR2_PWM 5
-  #define MOTOR2_IN_A 6
-  #define MOTOR2_IN_B 7
+  #define MOTOR1_PWM 10
+  #define MOTOR1_IN_A 11
+  #define MOTOR1_IN_B 12
 
-  #define MOTOR3_PWM 10
-  #define MOTOR3_IN_A 11
-  #define MOTOR3_IN_B 12
+  #define MOTOR4_PWM 5
+  #define MOTOR4_IN_A 6
+  #define MOTOR4_IN_B 7
 
-  #define MOTOR4_PWM 13
-  #define MOTOR4_IN_A 14
-  #define MOTOR4_IN_B 15
+  #define MOTOR3_PWM 13
+  #define MOTOR3_IN_A 14
+  #define MOTOR3_IN_B 15
 
   #define PWM_MAX pow(2, PWM_BITS) - 1
   #define PWM_MIN -PWM_MAX
